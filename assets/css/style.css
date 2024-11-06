@@ -86,3 +86,37 @@ p {
     text-transform: uppercase;
     display: inline-block;
 }
+
+.subtitulo {
+    font-size: 64px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .2);
+    text-align: right;
+    padding: 40px;
+    align-self: center; /*Alinhar um único item no grid*/
+}
+
+.vantagens {
+    background-color: #FFF;
+    padding: 40px;
+}
+
+.vantagens-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* O primeiro elemento é uma imagem pequena (ícone), para o tamanho da coluna ser o tamanho do elemento coloca-se 'auto', a segunda coluna fica com o tamanho que 'sobrar' da linha */
+    gap: 10px 20px; /* Distância entre as linhas: 10px, distância entre as colunas: 20px*/
+    padding: 20px;
+}
+
+.vantagens-item p {
+    /* Para o P ocupar a segunda coluna e não gerar uma nova linha */
+    grid-column: 2; /* Ocupará a segunda coluna*/
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #FFF;
+}
