@@ -33,6 +33,7 @@ p {
 .menu {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     text-transform: uppercase;
 }
@@ -47,4 +48,41 @@ p {
 
 .menu a:hover {
     background-color: rgba(255, 255, 255, .3);
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*divide em suas colunas iguais em tamanho*/
+    max-width: 1000px; /*O limite máximo do conteúdo é de 100px, não passará disso*/
+    /* Com a configuração do body para alinhar os items ao centro, quando a tela for maior
+    do que 1000px o conteúdo será centralizado na tela, expandindo-se somente o espaçamento fora do conteúdo */
+}
+
+.introducao {
+    background-color: #FFF;
+    padding: 40px;
+    text-align: right;
+    position: relative;
+    display: grid;
+    align-content: center; /*Alinha os itens ao centro no eixo y*/
+    justify-items: end; /*Os itens serão posicionados ao final e não ocupar o espaço todo como o padrão*/
+    gap: 20px; /*Espaçamento entre os itens*/
+}
+
+.detalhe {
+    width: 60px;
+    height: 4px;
+    background-color: #EE2211;
+    position: absolute; /*Position absoluta dentro da div introdução*/
+    top: 30px; /*Epaçamento dentro da div introdução*/
+    right: -30px; /*Epaçamento dentro da div introdução*/
+}
+
+.botao-ver-mais {
+    background-color: #EE2211;
+    color: #FFF;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-block;
 }
