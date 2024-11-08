@@ -26,35 +26,42 @@ a {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
 
-/* MENU */
+/* HEADER */
+.header {
+    display: grid;
+    justify-items: center;
+    gap: 60px;
+}
 
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5rem;
     text-transform: uppercase;
+    list-style: none;
 }
 
 .menu a {
+    display: block;
     border: 2px solid transparent;
     background-color: #FFF;
-    padding: 15px 20px;
+    padding: 1rem 2rem;
     border-radius: 4px;
     color: #000;
     cursor: pointer;
 }
 
 .menu a:hover {
-    border: 2px solid #E21;
+    border-color: #E21;
+    transition: .2s;
 }
 
 /* CONTEÚDO */
-
 .conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr; /*divide em suas colunas iguais em tamanho*/
@@ -65,13 +72,17 @@ p {
 
 .introducao {
     background-color: #FFF;
-    padding: 40px;
+    padding: 2.5rem;
     text-align: right;
     position: relative;
     display: grid;
     align-content: center; /*Alinha os itens ao centro no eixo y*/
     justify-items: end; /*Os itens serão posicionados ao final e não ocupar o espaço todo como o padrão*/
-    gap: 20px; /*Espaçamento entre os itens*/
+    gap: 1.5rem; /*Espaçamento entre os itens*/
+}
+
+.introducao h1 {
+    font-size: 2rem;
 }
 
 h1::before{
@@ -80,24 +91,15 @@ h1::before{
     position: absolute; /*Posição absoluta  dentro da 'introducao'*/
     width: 50px;
     height: 4px;
-    background-color: #A21;
+    background-color: #E21;
     top: 20px;
     right: -25px;
 }
 
-.detalhe {
-    width: 60px;
-    height: 4px;
-    background-color: #EE2211;
-    position: absolute; /*Position absoluta dentro da div introdução*/
-    top: 30px; /*Epaçamento dentro da div introdução*/
-    right: -30px; /*Epaçamento dentro da div introdução*/
-}
-
 .botao-ver-mais {
-    background-color: #EE2211;
+    background-color: #E21;
     color: #FFF;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 4px;
     text-transform: uppercase;
     display: inline-block;
@@ -105,29 +107,39 @@ h1::before{
 
 .botao-ver-mais:hover {
     background-color: #900;
-    transition: .3s;
+    transition: .2s;
 }
 
 .subtitulo {
-    font-size: 64px;
+    background-image: url(../img/onda.svg);
+    font-size: 4rem;
     text-transform: uppercase;
     color: rgba(0, 0, 0, .2);
     text-align: right;
-    padding: 40px;
-    align-self: center; /*Alinhar um único item no grid*/
+    padding: 2.5rem;
+    align-self: center; /* Alinhar um único item no grid */
 }
 
 .vantagens {
     background-color: #FFF;
-    padding: 40px;
+    padding: 2.5rem;
+}
+
+.vantagens li:nth-child(odd) {
+    background-color: #f7f7f7;
 }
 
 .vantagens-item {
     display: grid;
     grid-template-columns: auto 1fr;
     /* O primeiro elemento é uma imagem pequena (ícone), para o tamanho da coluna ser o tamanho do elemento coloca-se 'auto', a segunda coluna fica com o tamanho que 'sobrar' da linha */
-    gap: 10px 20px; /* Distância entre as linhas: 10px, distância entre as colunas: 20px*/
-    padding: 20px;
+    gap: 1rem 2rem; /* Distância entre as linhas: 10px, distância entre as colunas: 20px*/
+    padding: 1.5rem;
+}
+
+.vantagens-item:hover {
+    border-left: 4px solid #E21;
+    transition: .1s;
 }
 
 .vantagens-item p {
@@ -138,6 +150,6 @@ h1::before{
 footer {
     width: 100%;
     text-align: center;
-    padding: 40px 0;
+    padding: 2.5rem 0;
     background-color: #FFF;
 }
