@@ -81,6 +81,11 @@ p {
     gap: 1.5rem; /*Espaçamento entre os itens*/
 }
 
+.introducao-cover img {
+    object-fit: cover;
+    height: 100%;
+}
+
 .introducao h1 {
     font-size: 2rem;
 }
@@ -152,4 +157,43 @@ footer {
     text-align: center;
     padding: 2.5rem 0;
     background-color: #FFF;
+}
+
+@media (max-width: 1000px) {
+    .conteudo-vantagens {
+        grid-template-columns: 1fr;
+    }
+
+    .subtitulo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .header {
+        gap: 30px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao {
+        text-align: left;
+        justify-items: start;
+    }
+
+    .introducao h1::before {
+        display: none;
+    }
+
+    .subtitulo {
+        font-size: 3rem;
+    }
+
 }
